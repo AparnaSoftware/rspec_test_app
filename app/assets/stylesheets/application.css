@@ -1,0 +1,45 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+.rating {
+    margin: 0;
+}
+li.rating_star {
+    background-color: red;
+    background-image: url('/assets/white.jpg');
+    display: block;
+    float:left;
+}
+.on {
+    background-position:  0 16px;
+}
+.rate_widget {
+    overflow:   visible;
+    padding:    10px;
+    position:   relative;
+    width:      180px;
+    height:     32px;
+}
+.ratings_stars, .empty {
+    background: url('white.jpg') no-repeat;
+    float:      left;
+    height:     28px;
+    padding:    2px;
+    width:      32px;
+}
+.ratings_vote,.filled {
+    background: url('yellow_rating.png') no-repeat;
+}
+.ratings_over {
+    background: url('yellow_rating.png') no-repeat;
+}

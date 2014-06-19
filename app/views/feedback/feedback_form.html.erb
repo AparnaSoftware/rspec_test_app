@@ -1,0 +1,35 @@
+<h1>Feedback</h1>
+<!-- <p>Find me in app/views/feedback/feedback_form.html.erb</p> -->
+<div id="form_feedback">
+    <%= form_tag('/feedback/send_email') do %>
+        <div class="fld_bg">
+          <label for="love" id="love_it">Subject</label>
+          <%= hidden_field_tag :current_form, '', :value => "#{controller.controller_name}" %>
+          <%= hidden_field_tag :current_action, '', :value => "#{controller.action_name}" %>
+          <%= text_field_tag :title  %>
+
+          <label for="bug">Category</label>
+          <%= select_tag :category,  options_for_select([["suggest new feautres"],["Improve this page"],["I like this page"]]) %>
+
+          <label for="idea">Description</label>
+          <%= text_area_tag :message %>
+          <br/>
+          <div id="save"> <%= submit_tag 'Send', :id=>"feedback_button", :onclick => " return check_form()" %></div>
+        </div>
+    <% end %>
+  </div>
+  <script>
+  function check_form(){
+
+    if($('#title').val()!="" && $('#message').val()!="")
+    {
+      return true;
+    }
+    else
+    {
+
+    }
+      alert("Please enter subject and description");
+      return false;
+  }
+</script>
