@@ -1,4 +1,7 @@
 Myapp::Application.routes.draw do
+  resources :contacts
+
+
   get "feedback/feedback_form"
 
   post "feedback/send_email"
