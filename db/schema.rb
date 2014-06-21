@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(:version => 20140620123123) do
   end
 
   create_table "phones", :force => true do |t|
-    t.string   "home"
+    t.integer  "home"
     t.string   "mobile"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

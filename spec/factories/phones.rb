@@ -2,7 +2,8 @@
 
 FactoryGirl.define do
   factory :phone do
-    home 1
+    home  "7985641320"
     mobile "MyString"
   end
 end
+# validates :phone, uniqueness: { scope: :contact_id }

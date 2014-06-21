@@ -19,7 +19,13 @@ FactoryGirl.define do
    factory :contact do |f|
     f.firstname { Faker::Name.first_name } 
     f.lastname { Faker::Name.last_name }
-    f.phone { Faker::PhoneNumber.phno}
+    f.phno { Faker::PhoneNumber.phone_number}
  
     end 
+end 
+def name 
+	[firstname, lastname].join " " 
+end
+def self.by_letter(letter) 
+	where("lastname LIKE ?", "#{letter}%").order(:lastname) 
 end 
