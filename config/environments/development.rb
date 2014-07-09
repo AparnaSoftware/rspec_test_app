@@ -47,8 +47,8 @@ Myapp::Application.configure do
       domain: "gmail.com",
       authentication: "plain",
       enable_starttls_auto: true,
-      user_name: "praneetheee240@gmail.com",
-      password: "honey321#"
+      user_name: "yourmail@gmail.com",
+      password: "your password"
   }
 
 end
